@@ -166,9 +166,11 @@ public class Main {
 
         double roundNum = scanner5.nextDouble();
         double roundNumTemp = roundNum;
-        double roundedNum = Math.ceil(roundNum);
-
-        System.out.println(roundNumTemp+" rounded = "+roundedNum);
+        double roundNumTemp2 = roundNumTemp;
+        double roundedNumUp = Math.ceil(roundNum);
+        double roundedNumDown = Math.floor(roundNumTemp2);
+        System.out.println(roundNumTemp+" rounded up = "+roundedNumUp);
+        System.out.println(roundNumTemp2+" rounded down = "+roundedNumDown);
     }
 
     public static void main(String[] args) {
