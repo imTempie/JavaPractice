@@ -1,3 +1,6 @@
+//https://github.com/imTempie
+//Hello if you are reading this, have a good day!
+
 package com.company;
 import java.util.Scanner; // import scanner package
 import javax.swing.JOptionPane; // import JOptionPane for GUI
@@ -115,12 +118,12 @@ public class Main {
 
     public static void hypotenuse(){
         System.out.println("|~~~ Hypotenuse Calculator (only works on right-angled triangles ~~~|");
-
+        
         Scanner scanner2 = new Scanner(System.in);
-
+        
         System.out.println("What is the length of side A");
-
         double sideA = scanner2.nextDouble();
+        
         scanner2.nextLine();
 
         System.out.println("What is the length of side B");
