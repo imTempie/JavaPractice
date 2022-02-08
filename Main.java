@@ -77,6 +77,8 @@ public class Main {
 
         System.out.println("Hello "+name2+", You are "+age+" years old.");
         System.out.println("You like "+food);
+
+        scanner.close();
     }
 
     public static void expressions(){
@@ -118,18 +120,20 @@ public class Main {
 
     public static void hypotenuse(){
         System.out.println("|~~~ Hypotenuse Calculator (only works on right-angled triangles ~~~|");
-        
+
         Scanner scanner2 = new Scanner(System.in);
-        
+
         System.out.println("What is the length of side A");
         double sideA = scanner2.nextDouble();
-        
+
         scanner2.nextLine();
 
         System.out.println("What is the length of side B");
         double sideB = scanner2.nextDouble();
 
         System.out.println("The length of the hypotenuse is: "+Math.sqrt((sideA*sideA)+(sideB*sideB)));
+        
+        scanner2.close();
     }
 
     public static void maxNum(){
@@ -145,6 +149,8 @@ public class Main {
         double x3 = Math.max(x1, x2);
 
         System.out.println("The larger number is: "+x3);
+        
+        scanner3.close();
 
     }
 
@@ -161,6 +167,7 @@ public class Main {
         double x3 = Math.min(x1, x2);
 
         System.out.println("The smaller number is: "+x3);
+        scanner4.close();
     }
 
     public static void roundNum(){
@@ -174,6 +181,7 @@ public class Main {
         double roundedNumDown = Math.floor(roundNumTemp2);
         System.out.println(roundNumTemp+" rounded up = "+roundedNumUp);
         System.out.println(roundNumTemp2+" rounded down = "+roundedNumDown);
+        scanner5.close();
     }
 
     public static void main(String[] args) {
