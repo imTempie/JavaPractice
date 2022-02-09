@@ -178,10 +178,24 @@ public class Main {
         double roundNumTemp2 = roundNumTemp;
         double roundedNumUp = Math.ceil(roundNum);
         double roundedNumDown = Math.floor(roundNumTemp2);
-        
+
         System.out.println(roundNumTemp+" rounded up = "+roundedNumUp);
         System.out.println(roundNumTemp2+" rounded down = "+roundedNumDown);
         scanner5.close();
+    }
+
+    public static void ifName(){
+        while(true) {
+            Scanner scanner6 = new Scanner(System.in);
+            System.out.println("What's your name?");
+            String name4 = scanner6.nextLine();
+
+            if (name4.equals("tempie")) {
+                System.out.println("nice this works");
+            } else {
+                System.out.println("Something aint right...");
+            }
+        }
     }
 
     public static void main(String[] args) {
