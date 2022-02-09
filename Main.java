@@ -2,6 +2,7 @@
 //Hello if you are reading this, have a good day!
 package com.company;
 import java.lang.reflect.Array;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner; // import scanner package
 import javax.swing.JOptionPane; // import JOptionPane for GUI
@@ -422,6 +423,19 @@ public class Main {
 
         boolean resultEmpty = name.isEmpty();
         System.out.println("Is name empty: "+resultEmpty);
+
+        String resultToUpperCase = name.toUpperCase();
+        System.out.println("Name in uppercase: "+resultToUpperCase);
+
+        String resultToLowercase = name.toLowerCase();
+        System.out.println("Name in lowercase: "+resultToLowercase);
+
+        String resultReplace = name.replace('t','T');
+        System.out.println("Replaced 't' with 'T': tempie to: "+resultReplace);
+
+        String name2 = "  tempie    ";
+        String nameTrim = name2.trim();
+        System.out.println("Trimmed version of '  tempie    ': "+nameTrim);
     }
 
     public static void main(String[] args) {
