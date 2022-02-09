@@ -7,14 +7,12 @@ import java.util.Random;
 import java.util.Scanner; // import scanner package
 import javax.swing.JOptionPane; // import JOptionPane for GUI
 import java.lang.Math; // import math package
-import java.util.Random;
 
 public class Main {
 
     public static void pr(String x){
         System.out.println(x);
     }
-
 
     public static void prLn(String x){
         System.out.println("\n"+x);
