@@ -1,6 +1,7 @@
 //https://github.com/imTempie
 //Hello if you are reading this, have a good day!
 package com.company;
+import java.lang.reflect.Array;
 import java.util.Random;
 import java.util.Scanner; // import scanner package
 import javax.swing.JOptionPane; // import JOptionPane for GUI
@@ -335,10 +336,99 @@ public class Main {
         }
     }
 
+    public static void array1(){
+
+        // array = used to store multiple values in a single variable
+
+        String[] cars = {"Camaro", "Corvette", "Porsche", "BMW"};
+
+        cars[0] = "Mustang";
+
+        System.out.println(cars[0]);
+
+    }
+
+    public static void array2(){
+
+        // array = used to store multiple values in a single variable
+
+        String[] cars = new String[3];
+
+        cars[0] = "Camaro";
+        cars[1] = "Corvette";
+        cars[2] = "Porsche";
+
+        for(int i = 0; i < cars.length; i++){
+            System.out.println(cars[i]);
+        }
+
+    }
+
+    public static void array2D1(){
+
+        String[][] cars = new String[3][3];
+
+        cars[0][0] = "Camaro";
+        cars[0][1] = "Porsche";
+        cars[0][2] = "Mustang";
+
+        cars[1][0] = "Fiesta";
+        cars[1][1] = "Ranger";
+        cars[1][2] = "F-150";
+
+        cars[2][0] = "Ferrari";
+        cars[2][1] = "Lamborghini";
+        cars[2][2] = "Corvette";
+
+        for (int i = 0; i < cars.length; i++){
+            System.out.println();
+            for (int j = 0; j < cars[i].length; j++){
+                System.out.println(cars[i][j]+" ");
+            }
+        }
+    }
+
+    public static void array2D2(){
+        String[][] cars = {
+                {"Camaro","Corvette", "Silverado"},
+                {"Mustang", "Ranger", "F-15e"},
+                {"Ferrari","Lambo","Tesla"}
+        };
+
+        for (int i = 0; i < cars.length; i++){
+            System.out.println();
+            for (int j = 0; j < cars[i].length; j++){
+                System.out.println(cars[i][j]+" ");
+            }
+        }
+    }
+
+    public static void stringMethods(){
+
+        String name = "tempie";
+
+        boolean  result = name.equalsIgnoreCase("Tempie"); //.equalsIgnoreCase will ignore caps.
+        System.out.println("Does name equal Tempie: "+result);
+
+        int resultLength = name.length();
+        System.out.println("Name length: "+resultLength);
+
+        char resultLetter = name.charAt(0);
+        System.out.println("First letter "+resultLetter);
+
+        int resultIndexOf = name.indexOf("m");
+        resultIndexOf++;
+        System.out.println("m is at: "+resultIndexOf);
+
+        boolean resultEmpty = name.isEmpty();
+        System.out.println("Is name empty: "+resultEmpty);
+    }
+
     public static void main(String[] args) {
 
         // Put whatever function here
         // e.g. roundNum(); or minNum();
+        stringMethods();
 
     }
 }
