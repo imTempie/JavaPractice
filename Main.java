@@ -1,9 +1,11 @@
 //https://github.com/imTempie
 //Hello if you are reading this, have a good day!
 package com.company;
+import java.util.Random;
 import java.util.Scanner; // import scanner package
 import javax.swing.JOptionPane; // import JOptionPane for GUI
 import java.lang.Math; // import math package
+import java.util.Random;
 
 public class Main {
 
@@ -194,6 +196,141 @@ public class Main {
                 System.out.println("nice this works");
             } else {
                 System.out.println("Something aint right...");
+            }
+        }
+    }
+
+    public static void randomNum(){
+        Random random = new Random();
+
+        int randomNum = random.nextInt(6)+1; // this will generate a random number, 1-6
+        // double randomNum = random.nextDouble(); this will generate a number between 0 and 1
+        // boolean randomNum = random.nextBoolean(); this will generate either true or false randomly
+        System.out.println(randomNum);
+    }
+
+    public static void ifAge(){
+        int age = 77;
+
+        if(age >= 75){
+            System.out.println("Ok Boomer!");
+        }
+        else if(age >= 18){
+            System.out.println("You are of age.");
+        }
+        else if(age >= 13){
+            System.out.println("You are a teenager.");
+        }
+        else{
+            System.out.println("You are too young.");
+        }
+    }
+
+    public static void switchTest(){
+        // switch = statement that allows a variable to be tested for equality against a list of values
+
+        String day = "Saturday";
+
+        switch (day){
+            case "Sunday": System.out.println("It is Sunday!");
+            break;
+            case "Monday": System.out.println("It is Monday!");
+            break;
+            case "Tuesday": System.out.println("It is Tuesday!");
+            break;
+            case "Wednesday": System.out.println("It is Wednesday!");
+            break;
+            case "Thursday": System.out.println("It is Thursday!");
+            break;
+            case "Friday": System.out.println("It is Friday!");
+            break;
+            case "Saturday": System.out.println("It is Saturday!");
+            break;
+            default: System.out.println("That isn't a day of the week!");
+        }
+
+    }
+
+    public static void logicalOperator(){
+        // Logical operators are used to connect two or more expressions
+        // && = (AND) both conditions must be true
+        // || = (OR) either condition must be true
+        // ! = (NOT) reverses boolean value of a condition
+
+        int temp = 25;
+
+        if(temp > 30){
+            System.out.println("It is hot outside");
+        }
+        else if(temp>=20 && temp <=30){
+            System.out.println("It is warm outside");
+        }
+        else{
+            System.out.println("It is cold outside");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("You are playing a game! Press q or Q to quit");
+        String response = scanner.next();
+
+        if(response.equals("q") || response.equals("Q")){ // To use ! operator (NOT) if(!response.equals("q") && !response.equals("Q")){
+
+            System.out.println("You quit the game");
+        }
+        else{
+            System.out.println("You are still in the game");
+        }
+        scanner.close();
+    }
+
+    public static void whileLoop(){
+        // while loop executes a block of code as long as it's condition remains true
+
+        Scanner scanner = new Scanner(System.in);
+        String name = "";
+
+        while (name.isBlank()) {
+            System.out.println("Enter your name:    ");
+            name = scanner.nextLine();
+
+        }
+        System.out.println("Hello "+name);
+        scanner.close();
+    }
+
+    public static void forLoop(){
+        // for loop executes a block of code a limited amount of times
+
+        for(int i = 0; i <=10; i++){    // This for loop will print 0-10
+            System.out.println(i);
+        }
+
+        for(int i = 10; i <= 10 && i >=0;i--){      // This for loop will print 10-0
+            System.out.println(i);
+        }
+    }
+
+    public static void nestedLoops(){
+        // nested loop = a loop inside of a loop
+        Scanner scanner = new Scanner(System.in);
+        int rows;
+        int columns;
+        String symbol = "";
+
+        System.out.println("Enter # of rows: ");
+        rows = scanner.nextInt();
+
+        System.out.println("Enter # of columns: ");
+        columns = scanner.nextInt();
+
+        System.out.println("Enter symbol to use: ");
+        symbol = scanner.next();
+
+        for (int i = 1; i <= rows; i++){
+            System.out.println();
+            for (int j = 1; j <= columns; j++){
+                System.out.print(symbol);
             }
         }
     }
