@@ -1,13 +1,10 @@
 //https://github.com/imTempie
 //Hello if you are reading this, have a good day!
 package com.company;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Random;
-import java.util.Scanner; // import scanner package
+import java.util.*;
 import javax.swing.JOptionPane; // import JOptionPane for GUI
 import java.lang.Math; // import math package
+import java.lang.reflect.Array;
 
 public class Main {
 
@@ -499,13 +496,60 @@ public class Main {
     }
 
     public static void arrayList2D(){
+        // 2D ArrayList = a dynamic list of lists
+        // You can change the size of these lists during runtime
+
+        ArrayList<ArrayList<String>> groceryList = new ArrayList<>();
+
+        ArrayList<String> bakeryList = new ArrayList<>();
+        bakeryList.add("pasta");
+        bakeryList.add("garlic bread");
+        bakeryList.add("donuts");
+
+        ArrayList<String> produceList = new ArrayList<>();
+        produceList.add("tomato");
+        produceList.add("pepper");
+        produceList.add("beef");
+
+        ArrayList<String> drinkList = new ArrayList<>();
+        drinkList.add("water");
+        drinkList.add("milk");
+
+        groceryList.add(bakeryList);
+        groceryList.add(produceList);
+        groceryList.add(drinkList);
+
+        System.out.println(groceryList); //to show all lists
+        System.out.println(groceryList.get(0)); //to show one list from the lists
+        System.out.println(groceryList.get(0).get(0)); //to show one item from one list
+
+    }
+
+    public static void forEachLoop(){
+
+        // for-each = traversing technique to iterate through all the elements in an array/collection
+        //            less steps, more readable
+        //            less flexible
+
+        // String[] animals = {"cat", "dog", "rat", "tiger"};
+
+        ArrayList<String> animals = new ArrayList<String>();
+
+        animals.add("cat");
+        animals.add("dog");
+        animals.add("rat");
+        animals.add("tiger");
+
+        for(String i : animals){
+            System.out.println(i);
+        }
 
     }
 
     public static void main(String[] args) {
-
         // Put whatever function here
         // e.g. roundNum(); or minNum();
-        arrayList2D();
+
     }
+
 }
