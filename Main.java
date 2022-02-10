@@ -2,6 +2,7 @@
 //Hello if you are reading this, have a good day!
 package com.company;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner; // import scanner package
@@ -233,19 +234,19 @@ public class Main {
 
         switch (day){
             case "Sunday": System.out.println("It is Sunday!");
-            break;
+                break;
             case "Monday": System.out.println("It is Monday!");
-            break;
+                break;
             case "Tuesday": System.out.println("It is Tuesday!");
-            break;
+                break;
             case "Wednesday": System.out.println("It is Wednesday!");
-            break;
+                break;
             case "Thursday": System.out.println("It is Thursday!");
-            break;
+                break;
             case "Friday": System.out.println("It is Friday!");
-            break;
+                break;
             case "Saturday": System.out.println("It is Saturday!");
-            break;
+                break;
             default: System.out.println("That isn't a day of the week!");
         }
 
@@ -436,11 +437,75 @@ public class Main {
         System.out.println("Trimmed version of '  tempie    ': "+nameTrim);
     }
 
+    public static void wrapperClasses(){
+
+        // wrapper class = provides a way to use primitive data types as reference data types
+        //                 reference data types contain useful methods
+        //                 can be used with collections (ex.ArrayList)
+
+        // Primitive    //wrapper
+        //----------    //-------
+        // boolean      Boolean
+        // char         Character
+        // int          Integer
+        // double       Double
+
+        // autoboxing = the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes
+        // unboxing = the reverse of autoboxing. Automatic conversion of wrapper class to primitive.
+
+        Boolean a = true;
+        Character b = '@';
+        Integer c = 123;
+        Double d = 3.14;
+        String e = "Tempie";
+
+        if(a==true){
+            System.out.println("This is true");
+        }
+
+    }
+
+    public static void arrayList(){
+
+        // Arraylist = a resizeable array
+        //             Elements can be added and removed after compilation phase
+        //             store reference data types
+
+        // If you want to store integers, you must use wrapper class 'Integer' not int.
+        ArrayList<String> food = new ArrayList<String>();
+
+        food.add("potato");
+        food.add("burger");
+        food.add("hotdog");
+
+
+        for(int i = 0; i < food.size(); i++){
+            System.out.println(food.get(i));
+        }
+
+        food.set(0, "sushi");
+
+        for(int i = 0; i < food.size(); i++){
+            System.out.println(food.get(i));
+        }
+
+        food.remove(0);
+
+        for(int i = 0; i < food.size(); i++){
+            System.out.println(food.get(i));
+        }
+
+        food.clear(); //clears the array
+    }
+
+    public static void arrayList2D(){
+
+    }
+
     public static void main(String[] args) {
 
         // Put whatever function here
         // e.g. roundNum(); or minNum();
-        stringMethods();
-
+        arrayList2D();
     }
 }
